@@ -5,16 +5,19 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 import { GlobalStyle } from "../styles/GlobalStyles";
+import { MainContainer } from "../styles/HomeStyles";
 
 const IndexPage: FC<PageProps> = () => {
   return (
     <>
       <GlobalStyle/>
-      <main>
+      <div>
         <Header/>
-        <h1>Geruso.com</h1>
+        <MainContainer>
+          <h1>Geruso.com</h1>
+        </MainContainer>
         <Footer/>
-      </main>
+      </div>
     </>
   )
 }
