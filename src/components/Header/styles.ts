@@ -10,16 +10,6 @@ export const ContainerLight = styled.div`
   padding: 10px;
 `;
 
-export const ButtonThemeDark = styled.button`
-  float: right;
-  margin-top: 20px;
-`;
-
-export const ButtonThemeLight = styled.button`
-  float: right;
-  margin-top: 20px;
-`;
-
 export const LinkDark = styled.a`
   float: right;
   margin: 20px;

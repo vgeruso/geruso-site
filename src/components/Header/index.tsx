@@ -2,14 +2,18 @@ import React, { FC, useState } from "react";
 
 import {
   ContainerDark, 
-  ContainerLight, 
-  ButtonThemeDark, 
-  ButtonThemeLight, 
+  ContainerLight,
   LinkDark, 
   LinkLight
 } from "./styles";
 
-import { LogoDark, LogoLight } from "../Logo/Logo";
+import { LogoDark, LogoLight } from "../Logo";
+import { 
+  IconGitHubDark,
+  IconGitHubLight,
+  IconThemeDark,
+  IconThemeLight
+} from "../Icons";
 
 const Header: FC = () => {
   const [theme, setTheme] = useState('dark');
@@ -23,14 +27,22 @@ const Header: FC = () => {
       {theme === 'light' ? (
         <ContainerLight>
           <LogoLight/>
-          <ButtonThemeLight onClick={() => handleTheme('dark')}>theme</ButtonThemeLight>
-          <LinkLight href="https://github.com/vgeruso" target="__blank">github</LinkLight>
+          <LinkLight onClick={() => handleTheme('dark')}>
+            <IconThemeLight/>
+          </LinkLight>
+          <LinkLight href="https://github.com/vgeruso" target="__blank">
+            <IconGitHubLight/>
+          </LinkLight>
         </ContainerLight>
       ) : (
         <ContainerDark>
           <LogoDark/>
-          <ButtonThemeDark onClick={() => handleTheme('light')}>theme</ButtonThemeDark>
-          <LinkDark href="https://github.com/vgeruso" target="__blank">github</LinkDark>
+          <LinkDark onClick={() => handleTheme('light')}>
+            <IconThemeDark/>
+          </LinkDark>
+          <LinkDark href="https://github.com/vgeruso" target="__blank">
+            <IconGitHubDark/>
+          </LinkDark>
         </ContainerDark>
       )}
     </header>
