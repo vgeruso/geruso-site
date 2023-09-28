@@ -6,5 +6,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color: #F3F3F3;
+    min-height: 100vh;
   }
 `;
