@@ -1,22 +1,19 @@
 import React, { FC } from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { LogoDark } from "../components/Logo";
 
 import { GlobalStyle } from "../styles/GlobalStyles";
-import { MainContainer } from "../styles/HomeStyles";
 
 const IndexPage: FC<PageProps> = () => {
   return (
     <>
       <GlobalStyle/>
-      <div>
-        <Header/>
-        <MainContainer>
-          <h1>Geruso.com</h1>
-        </MainContainer>
-        <Footer/>
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#2a2c37', minHeight: '100vh'}}>
+        <div style={{justifyItems: 'center'}}>
+          <LogoDark />
+          <h4 style={{display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#ffffff'}}>Coming Soon...</h4>
+        </div>
       </div>
     </>
   )
