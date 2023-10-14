@@ -11,7 +11,14 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     { resolve: 'gatsby-plugin-styled-components' },
-    { resolve: 'gatsby-plugin-react-svg' },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
   ],
 };
 

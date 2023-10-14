@@ -9,7 +9,7 @@ import {
   Title, 
   Subtitle
 } from "./styles";
-import image from '../../images/image.jpg';
+import profile from '../../assets/profile.svg';
 import SkillBar from "../skillBar";
 
 // TODO Aplicar os estilos [Stiled-component]
@@ -19,7 +19,7 @@ const CardInfo: FC = () => {
       <ContainerDark>
         <HeadContainer>
           <ImgContainer>
-            <ImgProfile src={image} alt="profile"/>
+            <ImgProfile src={profile} alt="profile"/>
           </ImgContainer>
           <TitleContainer>
             <Title>Victor Geruso Mota Pereira Gomes</Title>

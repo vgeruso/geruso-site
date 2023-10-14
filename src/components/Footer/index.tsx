@@ -2,9 +2,9 @@ import React, { FC, useState } from "react";
 
 import { ContainerDark } from "./styles";
 
-import gitHub from '../../images/gh.svg';
-import linkedIn from '../../images/linkedin.svg';
-import x from '../../images/x.svg';
+import gitHub from '../../assets/gh.svg';
+import linkedIn from '../../assets/linkedin.svg';
+import x from '../../assets/x.svg';
 
 const Footer: FC = () => {
   const [year, _] = useState(new Date().getFullYear());

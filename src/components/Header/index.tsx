@@ -5,8 +5,8 @@ import {
   LinkDark, 
 } from "./styles";
 
-import logo from "../../images/Logo.svg";
-import gitHub from "../../images/gh.svg";
+import logo from "../../assets/Logo.svg";
+import gitHub from "../../assets/gh.svg";
 
 const Header: FC = () => {
   return (
