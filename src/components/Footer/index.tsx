@@ -2,7 +2,9 @@ import React, { FC, useState } from "react";
 
 import { ContainerDark } from "./styles";
 
-import { IconGitHubDark, IconLinkedIn, IconXDark } from "../Icons";
+import gitHub from '../../images/gh.svg';
+import linkedIn from '../../images/linkedin.svg';
+import x from '../../images/x.svg';
 
 const Footer: FC = () => {
   const [year, _] = useState(new Date().getFullYear());
@@ -12,13 +14,13 @@ const Footer: FC = () => {
         <div className="centralize">
           <div className="icons">
             <a href="https://github.com/vgeruso" target="__blank">
-              <IconGitHubDark/>
+              <img src={gitHub} alt="gitHub"/>
             </a>
             <a href="https://twitter.com/VGeruso" target="__blank">
-              <IconXDark/>
+              <img src={x} alt="x"/>
             </a>
             <a href="https://www.linkedin.com/in/victor-geruso-gomes-654a8111a/" target="__blank">
-              <IconLinkedIn/>
+              <img src={linkedIn} alt="linkedin" />
             </a>
           </div>
           <p className="justify">
