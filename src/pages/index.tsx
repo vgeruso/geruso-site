@@ -8,7 +8,6 @@ import { GlobalStyle } from "../styles/GlobalStyles";
 import { MainContainer } from "../styles/HomeStyles";
 import CardInfo from "../components/CardInfo";
 
-// TODO Trocar svg por png
 const IndexPage: FC<PageProps> = () => {
   return (
     <>

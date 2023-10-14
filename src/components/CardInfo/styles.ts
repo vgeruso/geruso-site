@@ -23,11 +23,6 @@ export const ImgContainer = styled.div`
   justify-content: center;
 `;
 
-export const ImgProfile = styled.img`
-  height: 90%;
-  border-radius: 10em;
-`;
-
 export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;

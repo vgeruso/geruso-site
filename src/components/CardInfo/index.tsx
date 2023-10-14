@@ -2,14 +2,13 @@ import React, {FC} from "react";
 
 import { 
   ContainerDark,
-  ImgProfile,
   HeadContainer, 
   ImgContainer, 
   TitleContainer, 
   Title, 
   Subtitle
 } from "./styles";
-import profile from '../../assets/profile.svg';
+import Profile from '../../assets/profile.svg';
 import SkillBar from "../skillBar";
 
 // TODO Aplicar os estilos [Stiled-component]
@@ -19,7 +18,7 @@ const CardInfo: FC = () => {
       <ContainerDark>
         <HeadContainer>
           <ImgContainer>
-            <ImgProfile src={profile} alt="profile"/>
+            <Profile />
           </ImgContainer>
           <TitleContainer>
             <Title>Victor Geruso Mota Pereira Gomes</Title>

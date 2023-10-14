@@ -5,17 +5,16 @@ import {
   LinkDark, 
 } from "./styles";
 
-import logo from "../../assets/Logo.svg";
-import gitHub from "../../assets/gh.svg";
+import Logo from "../../assets/Logo.svg";
+import GitHub from "../../assets/gh.svg";
 
 const Header: FC = () => {
   return (
     <header>
         <ContainerDark>
-          {/* <LogoDark/> */}
-          <img src={logo} alt="logo"/>
+          <Logo/>
           <LinkDark href="https://github.com/vgeruso" target="__blank">
-            <img src={gitHub} alt="gitHub"/>
+            <GitHub/>
           </LinkDark>
         </ContainerDark>
     </header>
