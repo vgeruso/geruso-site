@@ -25,4 +25,10 @@ const IndexPage: FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Geruso</title>
+export const Head: HeadFC = () => {
+ return (
+  <>
+    <title>Geruso</title>
+  </>
+ );
+}

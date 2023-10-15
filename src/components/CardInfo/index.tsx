@@ -6,7 +6,10 @@ import {
   ImgContainer, 
   TitleContainer, 
   Title, 
-  Subtitle
+  Subtitle,
+  ContainerTools,
+  TitleHabilities,
+  ContainerHabilities
 } from "./styles";
 import Profile from '../../assets/profile.svg';
 import SkillBar from "../skillBar";
@@ -74,7 +77,6 @@ const tools: any = [
   },
 ];
 
-// TODO Aplicar os estilos [Stiled-component]
 const CardInfo: FC = () => {
   return (
     <div>
@@ -88,12 +90,12 @@ const CardInfo: FC = () => {
             <Subtitle>Engenheiro de Software</Subtitle>
           </TitleContainer>
         </HeadContainer>
-        <div style={{padding: '20px'}}>
-          <h3 style={{color: '#cecece'}}>Habilidades</h3>
-          <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
-            {tools.map((item: any) => <SkillBar tool={item.tool} level={item.level}/>)}
-          </div>
-        </div>
+        <ContainerHabilities>
+          <TitleHabilities>Habilidades</TitleHabilities>
+          <ContainerTools>
+            {tools.map((item: any) => <SkillBar key={item.tool} tool={item.tool} level={item.level}/>)}
+          </ContainerTools>
+        </ContainerHabilities>
       </ContainerDark>
     </div>
   )

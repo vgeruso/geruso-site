@@ -43,3 +43,19 @@ export const Subtitle = styled.h3`
   margin-top: 0;
   font-size: 1.5em;
 `;
+
+export const ContainerHabilities = styled.div`
+  padding: 20px;
+`;
+
+export const TitleHabilities = styled.h3`
+  color: #cecece;
+`;
+
+export const ContainerTools = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+`;
