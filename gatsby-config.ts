@@ -1,4 +1,7 @@
 import type { GatsbyConfig } from 'gatsby';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -26,7 +29,7 @@ const config: GatsbyConfig = {
         method: 'get',
         headers: {
           'Content-Type': 'application/json',
-          'api-key': 'EJEfqjyyXtzkbi6GvrixEjsL',
+          'api-key': process.env.DEV_API_KEY,
         },
       },
     },
