@@ -20,9 +20,14 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: 'gatsby-source-dev',
+      resolve: 'gatsby-source-apiserver',
       options: {
-        username: 'vgeruso',
+        url: `https://dev.to/api/articles/me`,
+        method: 'get',
+        headers: {
+          'Content-Type': 'application/json',
+          'api-key': 'EJEfqjyyXtzkbi6GvrixEjsL',
+        },
       },
     },
   ],

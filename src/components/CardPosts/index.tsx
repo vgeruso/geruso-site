@@ -5,15 +5,14 @@ import { graphql, useStaticQuery } from "gatsby";
 const CardPosts = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      allDevArticles(sort: {article: {published_timestamp: DESC}}) {
+      allUndefined(sort: {published_at: DESC}) {
         nodes {
-          article {
-            id
-            title
-            url
-            cover_image
-            published_at(formatString: "MMM DD, YYYY")
-          }
+          id
+          title
+          url
+          published_at(formatString: "MMM DD, YYYY")
+          published
+          cover_image
         }
       }
     }
@@ -22,8 +21,8 @@ const CardPosts = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    console.log('DATA::', data.allDevArticles.nodes);
-    setPosts(data.allDevArticles.nodes);
+    console.log('DATA::', data.allUndefined.nodes);
+    setPosts(data.allUndefined.nodes);
   }, []);
 
   return (
@@ -32,13 +31,17 @@ const CardPosts = () => {
           <Title>Meus Artigos no <a href="https://dev.to/vgeruso" target="__blank">Dev To</a></Title>
         </HeadContainer>
         <ContainerPosts>
-          {posts.map((item: any) => (
-            <Post key={item.article.id} href={item.article.url} target="__blank">
-              <img src={item.article.cover_image} width={500} height={200}/>
-              <p>{item.article.title}</p>
-              <span>{item.article.published_at}</span>
-            </Post>
-          ))}
+          {posts.map((item: any) => {
+            if (item.published && item.title) {
+              return (
+                <Post key={item.id} href={item.url} target="__blank">
+                  <img src={item.cover_image} width={500} height={200}/>
+                  <p>{item.title}</p>
+                  <span>{item.published_at}</span>
+                </Post>
+              )
+            }  
+          })}
         </ContainerPosts>
     </Container>
   );
