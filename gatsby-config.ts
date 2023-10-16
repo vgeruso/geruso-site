@@ -20,11 +20,9 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-source-dev',
       options: {
-        options: {
-          icon: 'src/assets/icon.png',
-        },
+        username: 'vgeruso',
       },
     },
   ],
