@@ -79,25 +79,23 @@ const tools: any = [
 
 const CardInfo: FC = () => {
   return (
-    <div>
-      <ContainerDark>
-        <HeadContainer>
-          <ImgContainer>
-            <Profile />
-          </ImgContainer>
-          <TitleContainer>
-            <Title>Victor Geruso Mota Pereira Gomes</Title>
-            <Subtitle>Engenheiro de Software</Subtitle>
-          </TitleContainer>
-        </HeadContainer>
-        <ContainerHabilities>
-          <TitleHabilities>Habilidades</TitleHabilities>
-          <ContainerTools>
-            {tools.map((item: any) => <SkillBar key={item.tool} tool={item.tool} level={item.level}/>)}
-          </ContainerTools>
-        </ContainerHabilities>
-      </ContainerDark>
-    </div>
+    <ContainerDark>
+      <HeadContainer>
+        <ImgContainer>
+          <Profile />
+        </ImgContainer>
+        <TitleContainer>
+          <Title>Victor Geruso Mota Pereira Gomes</Title>
+          <Subtitle>Engenheiro de Software {`(dev Backend)`}</Subtitle>
+        </TitleContainer>
+      </HeadContainer>
+      <ContainerHabilities>
+        <TitleHabilities>Habilidades</TitleHabilities>
+        <ContainerTools>
+          {tools.map((item: any) => <SkillBar key={item.tool} tool={item.tool} level={item.level}/>)}
+        </ContainerTools>
+      </ContainerHabilities>
+    </ContainerDark>
   )
 }
 
