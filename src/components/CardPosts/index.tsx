@@ -35,7 +35,7 @@ const CardPosts = () => {
             if (item.published && item.title) {
               return (
                 <Post key={item.id} href={item.url} target="__blank">
-                  <img src={item.cover_image} width={500} height={200}/>
+                  <img src={item.cover_image}/>
                   <p>{item.title}</p>
                   <span>{item.published_at}</span>
                 </Post>

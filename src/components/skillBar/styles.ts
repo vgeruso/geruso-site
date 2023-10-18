@@ -6,6 +6,10 @@ export const ContainerSkillBar = styled.div`
   width: 18%;
   margin-right: 10px;
   margin-bottom: 5px;
+
+  @media (max-width: 430px) {
+    width: 100%;
+  }
 `;
 
 export const TitleTool = styled.p`

@@ -13,13 +13,16 @@ export const HeadContainer = styled.div`
 `;
 
 export const Title = styled.h2`
-  /* h2 style={{marginBottom: '20px', color: '#cecece'}} */
   margin-bottom: 20px;
   color: #cecece;
 
   a {
     color: #df8675;
     text-decoration: none;
+  }
+
+  @media (max-width: 325px) {
+    font-size: 1em;
   }
 `;
 
@@ -28,6 +31,8 @@ export const ContainerPosts = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Post = styled.a`
@@ -50,10 +55,34 @@ export const Post = styled.a`
   span {
     font-size: 0.7em;
     color: #5b6079;
-    margin-left: 28.9em;
   }
 
   img {
     margin: 0;
+    width: 500px;
+  }
+
+  @media (max-width: 430px) {
+    width: 100%;
+
+    p {
+      font-size: 1em;
+    }
+
+    span {
+      font-size: 0.6em;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 380px) {
+    width: 100%;
+  }
+
+  @media (max-width: 325px) {
+    width: 100%;
   }
 `;
