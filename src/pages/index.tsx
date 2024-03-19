@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
-import { LogoDark } from "../components/Logo";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import { GlobalStyle } from "../styles/GlobalStyles";
 import { MainContainer } from "../styles/HomeStyles";
