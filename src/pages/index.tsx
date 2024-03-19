@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 import { GlobalStyle } from "../styles/GlobalStyles";
 import { MainContainer } from "../styles/HomeStyles";
 import CardInfo from "../components/CardInfo";
-import CardAbout from "../components/CardAbout";
 import CardPosts from "../components/CardPosts";
 
 const IndexPage: FC<PageProps> = () => {
