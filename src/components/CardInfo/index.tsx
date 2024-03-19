@@ -5,11 +5,13 @@ import {
   HeadContainer, 
   ImgContainer, 
   TitleContainer, 
-  Title, 
+  Title,
+  Name, 
   Subtitle,
   ContainerTools,
-  TitleHabilities,
-  ContainerHabilities
+  ContainerHabilities,
+  ContainerAbout,
+  Pargraph
 } from "./styles";
 import Profile from '../../assets/profile.svg';
 import SkillBar from "../skillBar";
@@ -85,12 +87,34 @@ const CardInfo: FC = () => {
           <Profile />
         </ImgContainer>
         <TitleContainer>
-          <Title>Victor Geruso Mota Pereira Gomes</Title>
-          <Subtitle>Engenheiro de Software {`(dev Backend)`}</Subtitle>
+          <Name>Victor Geruso Mota Pereira Gomes</Name>
+          <Subtitle>Engenheiro de Software {`(Dev Backend)`}</Subtitle>
         </TitleContainer>
       </HeadContainer>
+      <ContainerAbout>
+        <Title>Sobre mim</Title>
+        <Pargraph>
+          Olá, sou Victor Geruso Gomes, tenho 27 anos e sou Bacharel em 
+          engenharia de Software formado pela Universidade Católica do 
+          Salvador (Ucsal), focado no desenvolvimento backend estou 
+          atualmente em busca de aprimoramento técnico em arquitetura, 
+          estruturas e armazenamento de dados.
+        </Pargraph>
+        <Pargraph>
+          Possuo experiencia de 4.6 anos em desenvolvimento Web, trabalhando a
+          maior parte do tempo como fullstack em empresas conceituadas na área
+          da região metropolitana de Salvador, nessas empresas atuei com
+          documentação e desenvolvimento de sites, serviços web/mobile, APIs,
+          sistemas Saas, entre outros.
+        </Pargraph>
+        <Pargraph>
+          Estou sempre em busca de melhorias, realizando desde cursos até
+          certificações para me manter por dentro de tudo que tenho ao meu
+          alcance para agregar valor onde eu estiver.
+        </Pargraph>
+      </ContainerAbout>
       <ContainerHabilities>
-        <TitleHabilities>Habilidades</TitleHabilities>
+        <Title>Habilidades</Title>
         <ContainerTools>
           {tools.map((item: any) => <SkillBar key={item.tool} tool={item.tool} level={item.level}/>)}
         </ContainerTools>

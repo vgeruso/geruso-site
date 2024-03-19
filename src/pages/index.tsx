@@ -18,7 +18,6 @@ const IndexPage: FC<PageProps> = () => {
         <Header/>
         <MainContainer>
           <CardInfo/>
-          <CardAbout/>
           <CardPosts/>
         </MainContainer>
         <Footer/>

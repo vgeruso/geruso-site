@@ -18,17 +18,25 @@ const CardPosts = () => {
     }
   `);
 
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<any[]>([]);
 
   useEffect(() => {
-    console.log('DATA::', data.allUndefined.nodes);
-    setPosts(data.allUndefined.nodes);
+    const postsRecents: any[] = [];
+    for (let post of data.allUndefined.nodes) {
+      if (postsRecents.length === 5) {
+        break;
+      }
+      postsRecents.push(post);
+    }
+
+    console.log(postsRecents);
+    setPosts(postsRecents);
   }, []);
 
   return (
     <Container>
         <HeadContainer>
-          <Title>Meus Artigos no <a href="https://dev.to/vgeruso" target="__blank">Dev To</a></Title>
+          <Title>Meus Artigos no <a href="https://dev.to/vgeruso" target="__blank">dev.to</a></Title>
         </HeadContainer>
         <ContainerPosts>
           {posts.map((item: any) => {

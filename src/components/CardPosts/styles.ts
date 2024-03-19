@@ -52,6 +52,10 @@ export const Post = styled.a`
     margin-bottom: 0;
   }
 
+  p:hover {
+    text-decoration: underline;
+  }
+
   span {
     font-size: 0.7em;
     color: #5b6079;

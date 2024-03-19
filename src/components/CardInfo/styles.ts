@@ -62,7 +62,7 @@ export const TitleContainer = styled.div`
   width: 75%;
 `;
 
-export const Title = styled.h1`
+export const Name = styled.h1`
   color: #cecece;
   margin-bottom: 0;
   font-size: 3.5em;
@@ -114,7 +114,7 @@ export const ContainerHabilities = styled.div`
   padding: 20px;
 `;
 
-export const TitleHabilities = styled.h3`
+export const Title = styled.h3`
   color: #cecece;
 `;
 
@@ -128,4 +128,18 @@ export const ContainerTools = styled.div`
   @media (max-width: 430px) {
     flex-direction: column;
   }
+`;
+
+export const ContainerAbout = styled.div`
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+`;
+
+export const Pargraph = styled.p`
+  text-align: justify;
+  text-justify: inter-word;
+  color: #cecece;
+  padding-left: 45px;
+  font-weight: bold;
 `;
