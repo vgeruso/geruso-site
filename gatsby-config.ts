@@ -33,6 +33,50 @@ const config: GatsbyConfig = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+               path
+            }
+          }
+        }
+        `,
+        resolveSiteUrl: () => `https://www.geruso.com`,
+        resolvePages: ({ allSitePage: { nodes: allPages } }: any) => {
+          return allPages.map((page: any) => {
+            return { ...page };
+          });
+        },
+        serialize: ({ path, modifiedGmt }: any) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          };
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [process.env.GA_TRACKING_ID],
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Avoids sending pageview hits from custom paths
+          exclude: ['/preview/**', '/do-not-track/me/too/'],
+          // Defaults to https://www.googletagmanager.com
+          origin: 'https://www.googletagmanager.com',
+          // Delays processing pageview events on route update (in milliseconds)
+          delayOnRouteUpdate: 0,
+        },
+      },
+    },
   ],
 };
 

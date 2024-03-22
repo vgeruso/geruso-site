@@ -36,7 +36,7 @@ const CardPosts = () => {
   return (
     <Container>
         <HeadContainer>
-          <Title>Meus Artigos no <a href="https://dev.to/vgeruso" target="__blank">dev.to</a></Title>
+          <Title>Meus artigos no <a href="https://dev.to/vgeruso" target="__blank">dev.to</a></Title>
         </HeadContainer>
         <ContainerPosts>
           {posts.map((item: any) => {

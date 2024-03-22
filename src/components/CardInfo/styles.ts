@@ -30,6 +30,7 @@ export const ImgContainer = styled.div`
   justify-content: center;
 
   @media (max-width: 1300px) {
+    width: 70%;
     margin-bottom: 0;
   }
 
