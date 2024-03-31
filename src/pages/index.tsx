@@ -1,19 +1,25 @@
 import React, { FC } from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
-import { LogoDark } from "../components/Logo";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import { GlobalStyle } from "../styles/GlobalStyles";
+import { MainContainer } from "../styles/HomeStyles";
+import CardInfo from "../components/CardInfo";
+import CardPosts from "../components/CardPosts";
 
 const IndexPage: FC<PageProps> = () => {
   return (
     <>
       <GlobalStyle/>
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#2a2c37', minHeight: '100vh'}}>
-        <div style={{justifyItems: 'center'}}>
-          <LogoDark />
-          <h4 style={{display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#ffffff'}}>Coming Soon...</h4>
-        </div>
+      <div>
+        <Header/>
+        <MainContainer>
+          <CardInfo/>
+          <CardPosts/>
+        </MainContainer>
+        <Footer/>
       </div>
     </>
   )
@@ -21,4 +27,10 @@ const IndexPage: FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Geruso</title>
+export const Head: HeadFC = () => {
+ return (
+  <>
+    <title>Geruso</title>
+  </>
+ );
+}

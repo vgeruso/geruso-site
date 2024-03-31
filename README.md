@@ -9,31 +9,33 @@
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+1. **Install demendencies.**
 
     ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
+    npm install
     ```
 
-2.  **Start developing.**
+2.  **Create an `.env`.**
 
-    Navigate into your new site’s directory and start it up.
+    ```env
+    DEV_API_KEY=
+    ```
+
+    get the key on dev.to site profile.
+
+3.  **Start developing.**
 
     ```shell
-    cd my-gatsby-site/
     npm run develop
     ```
 
-3.  **Open the code and start customizing!**
+4.  **Open the code and start customizing!**
 
     Your site is now running at http://localhost:8000!
 
     Edit `src/pages/index.tsx` to see your site update in real-time!
 
-4.  **Learn more**
+5.  **Learn more**
 
     - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
     - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
