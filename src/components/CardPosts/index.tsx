@@ -28,8 +28,7 @@ const CardPosts = () => {
       }
       postsRecents.push(post);
     }
-
-    console.log(postsRecents);
+    
     setPosts(postsRecents);
   }, []);
 

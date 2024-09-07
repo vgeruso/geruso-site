@@ -8,6 +8,7 @@ import { GlobalStyle } from "../styles/GlobalStyles";
 import { MainContainer } from "../styles/HomeStyles";
 import CardInfo from "../components/CardInfo";
 import CardPosts from "../components/CardPosts";
+import CardContributions from "../components/CardContributions";
 
 const IndexPage: FC<PageProps> = () => {
   return (
@@ -18,6 +19,7 @@ const IndexPage: FC<PageProps> = () => {
         <MainContainer>
           <CardInfo/>
           <CardPosts/>
+          <CardContributions/>
         </MainContainer>
         <Footer/>
       </div>
