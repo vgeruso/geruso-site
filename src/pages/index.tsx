@@ -9,8 +9,9 @@ import { MainContainer } from "../styles/HomeStyles";
 import CardInfo from "../components/CardInfo";
 import CardPosts from "../components/CardPosts";
 import CardContributions from "../components/CardContributions";
+import { useYear } from "../hooks/useYear";
 
-const IndexPage: FC<PageProps> = () => {
+const IndexPage: FC<PageProps> = () => { 
   return (
     <>
       <GlobalStyle/>
@@ -19,7 +20,7 @@ const IndexPage: FC<PageProps> = () => {
         <MainContainer>
           <CardInfo/>
           <CardPosts/>
-          <CardContributions/>
+          {/* <CardContributions/> */}
         </MainContainer>
         <Footer/>
       </div>
@@ -30,9 +31,12 @@ const IndexPage: FC<PageProps> = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => {
- return (
+  const { year } = useYear();
+ 
+  return (
   <>
-    <title>Geruso</title>
+    <title>Geruso | {year}</title>
+    <link rel="icon" type="image/x-icon" href="../../icon.ico" />
   </>
  );
 }

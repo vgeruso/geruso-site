@@ -3,11 +3,12 @@ import React, { FC, useState } from "react";
 import { ContainerDark } from "./styles";
 
 import GitHub from '../../assets/gh.svg';
-import X from '../../assets/x.svg';
+import BlueSky from '../../assets/bsky.svg';
 import LinkedIn from '../../assets/linkedin.svg';
+import { useYear } from "../../hooks/useYear";
 
 const Footer: FC = () => {
-  const [year, _] = useState(new Date().getFullYear());
+  const { year } = useYear();
 
   return (
       <ContainerDark>
@@ -16,8 +17,8 @@ const Footer: FC = () => {
             <a href="https://github.com/vgeruso" target="__blank">
               <GitHub/>
             </a>
-            <a href="https://twitter.com/VGeruso" target="__blank">
-              <X/>
+            <a href="https://bsky.app/profile/geruso.com" target="__blank">
+              <BlueSky/>
             </a>
             <a href="https://www.linkedin.com/in/victor-geruso-gomes-654a8111a/" target="__blank">
               <LinkedIn />

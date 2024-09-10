@@ -16,11 +16,6 @@ export const Title = styled.h2`
   margin-bottom: 20px;
   color: #cecece;
 
-  a {
-    color: #df8675;
-    text-decoration: none;
-  }
-
   @media (max-width: 325px) {
     font-size: 1em;
   }
@@ -50,10 +45,6 @@ export const Post = styled.a`
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 0;
-  }
-
-  p:hover {
-    text-decoration: underline;
   }
 
   span {
