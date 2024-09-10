@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 const CardPosts = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query Devto {
       allUndefined(sort: {published_at: DESC}) {
         nodes {
           id
@@ -28,8 +28,7 @@ const CardPosts = () => {
       }
       postsRecents.push(post);
     }
-
-    console.log(postsRecents);
+    
     setPosts(postsRecents);
   }, []);
 

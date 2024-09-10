@@ -34,6 +34,17 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: `GitHub`,
+        fieldName: `github`,
+        url: `https://api.github.com/graphql`,
+        headers: {
+          Authorization: `Bearer ${process.env.GH_API_KEY}`,
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         query: `

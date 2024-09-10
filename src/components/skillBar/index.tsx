@@ -35,7 +35,7 @@ const SkillBar: FC<PorpSkill> = ({level, tool}: PorpSkill) => {
 
   useEffect(() => {
     switch(level) {
-      case 'adivanced':
+      case 'advanced':
         setColorIni("#ACD2AB");
         setColorMid("#69BF67");
         setColorFin("#3EA13C");
