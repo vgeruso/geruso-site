@@ -81,7 +81,7 @@ const tools: any = [
 ];
 
 const CardInfo: FC = () => {
-  const { old } = useYear();
+  const { old , experienceYears} = useYear();
 
   return (
     <ContainerDark>
@@ -104,7 +104,7 @@ const CardInfo: FC = () => {
           estruturas e armazenamento de dados.
         </Pargraph>
         <Pargraph>
-          Possuo experiencia de 4.6 anos em desenvolvimento Web, trabalhando a
+          Possuo experiencia de {experienceYears} anos em desenvolvimento Web, trabalhando a
           maior parte do tempo como fullstack em empresas conceituadas na área
           da região metropolitana de Salvador, nessas empresas atuei com
           documentação e desenvolvimento de sites, serviços web/mobile, APIs,
