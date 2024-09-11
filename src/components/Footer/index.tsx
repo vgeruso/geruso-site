@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 
 import { ContainerDark } from "./styles";
 
@@ -6,9 +6,34 @@ import GitHub from '../../assets/gh.svg';
 import BlueSky from '../../assets/bsky.svg';
 import LinkedIn from '../../assets/linkedin.svg';
 import { useYear } from "../../hooks/useYear";
+import { graphql, useStaticQuery } from "gatsby";
 
 const Footer: FC = () => {
+  const data = useStaticQuery(graphql`
+    query GithubSiteVersion {
+      github {
+        repository(name: "geruso-site", owner: "vgeruso") {
+          releases(last: 1) {
+            edges {
+              node {
+                id
+                tag {
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
   const { year } = useYear();
+
+  const [version, setVersion] = useState<string>('');
+
+  useEffect(() => {
+    setVersion(data.github.repository.releases.edges[0].node.tag.name);
+  }, []);
 
   return (
       <ContainerDark>
@@ -27,7 +52,7 @@ const Footer: FC = () => {
           <p className="justify">
             <a href="mailto:victor.geruso@gmail.com">victor.gerus@gmail.com</a>
           </p>
-          <span className="justify">Created by Victor Geruso - {year}</span>
+          <span className="justify">Created by Victor Geruso - {year} - v{version}</span>
         </div>
       </ContainerDark>
   );
