@@ -138,7 +138,7 @@ export const ContainerAbout = styled.div`
 `;
 
 export const Pargraph = styled.p`
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
   color: #cecece;
   padding-left: 45px;
