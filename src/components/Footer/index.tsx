@@ -13,7 +13,7 @@ const Footer: FC = () => {
     query GithubSiteVersion {
       github {
         repository(name: "geruso-site", owner: "vgeruso") {
-          releases(last: 1) {
+          releases(first: 1) {
             edges {
               node {
                 id
