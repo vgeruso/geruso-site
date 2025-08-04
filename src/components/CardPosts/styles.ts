@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 export const Container = styled.div`
   background-color: #2a2c37;
@@ -39,6 +39,8 @@ export const Post = styled.a`
   background-color: #cecece;
   display: flex;
   flex-direction: column;
+  justfy-content: center;
+  align-items: center;
   padding: 10px;
   border-radius: 10px;
   text-decoration: none;
@@ -50,6 +52,10 @@ export const Post = styled.a`
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 0;
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: hidden; /* Esconde o texto que excede */
+    text-overflow: ellipsis; /* Adiciona os "..." */
+    max-width: 400px; /* Define largura máxima */
   }
 
   p:hover {
