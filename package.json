@@ -1,40 +1,40 @@
 {
   "name": "geruso-site",
-  "version": "1.0.0",
-  "private": true,
-  "description": "geruso-site",
-  "author": "vgeruso",
-  "keywords": [
-    "gatsby"
-  ],
+  "version": "2.0.0",
+  "type": "module",
+  "author": {
+    "email": "victor.geruso@gmail.com",
+    "name": "Victor Geruso Gomes",
+    "url": "https://geruso.com"
+  },
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.7.2",
-    "babel-plugin-styled-components": "^2.1.4",
-    "dotenv": "^16.3.1",
-    "gatsby": "^5.12.4",
-    "gatsby-plugin-google-gtag": "^5.13.1",
-    "gatsby-plugin-react-svg": "^3.3.0",
-    "gatsby-plugin-sitemap": "^6.13.1",
-    "gatsby-plugin-styled-components": "^6.12.0",
-    "gatsby-source-apiserver": "^2.1.8",
-    "gatsby-source-graphql": "^5.13.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^6.0.8",
-    "svg-react-loader": "^0.4.6"
+    "framer-motion": "^12.35.2",
+    "lucide-react": "^0.577.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.3.3",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
-    "typescript": "^5.1.6"
+    "@eslint/js": "^9.39.1",
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.3",
+    "vite": "^7.2.2"
   }
 }
