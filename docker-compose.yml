@@ -1,0 +1,10 @@
+services:
+  site:
+    restart: ${SERVER:-always}
+    build:
+      context: .
+      target: ${ENV:-prod}
+      dockerfile: Dockerfile
+    container_name: geruso-site-${ENV:-prod}
+    ports:
+      - "${SITE_PORT}:5173"
