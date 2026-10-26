@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1500" height="500" viewBox="0 0 1500 500" role="img" aria-label="Victor Geruso cover">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="36%" r="40%">
+      <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#06090f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="70%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1500" height="500" fill="#06090f"/>
+  <rect width="1500" height="500" fill="url(#glow)"/>
+
+  <image href="geruso_logo_gradient.png" xlink:href="geruso_logo_gradient.png"
+         x="630" y="36" width="240" height="240" preserveAspectRatio="xMidYMid meet"/>
+
+  <text x="750" y="330" text-anchor="middle" font-family="system-ui,sans-serif" font-size="42" font-weight="700" letter-spacing="0.04em" fill="url(#textGrad)">VICTOR GERUSO</text>
+  <text x="750" y="368" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="500" letter-spacing="0.22em" fill="#64748b">ENGENHEIRO DE SOFTWARE</text>
+</svg>
