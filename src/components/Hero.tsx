@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin } from 'lucide-react'
 import { profile } from '../data/profile'
+import { ScrollHint } from './ScrollHint'
 
 export function Hero() {
   return (
@@ -67,14 +68,7 @@ export function Hero() {
         </div>
       </motion.div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.6 }}
-        className="absolute bottom-8 left-0 text-xs font-medium tracking-[0.2em] text-[var(--text-muted)] uppercase"
-      >
-        role para explorar
-      </motion.p>
+      <ScrollHint />
     </header>
   )
 }

@@ -1,5 +1,6 @@
 import { About } from './components/About'
 import { Articles } from './components/Articles'
+import { Books } from './components/Books'
 import { Contacts } from './components/Contacts'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
@@ -15,6 +16,7 @@ function App() {
         <Skills />
         <Projects />
         <Articles />
+        <Books />
         <Contacts />
         <Footer />
       </div>
