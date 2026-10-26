@@ -4,9 +4,9 @@ export const profile = {
   tagline:
     'Backend, dados e produtos digitais — do sertão baiano para a produção.',
   about: [
-    'Nordestino do sertão baiano, código desde os 12 anos — comecei como web designer com HTML, CSS e JavaScript vanilla, ainda como brincadeira séria. Formei-me em Engenharia de Software pela Universidade Católica do Salvador (UCSal) e, desde 2018, atuo profissionalmente com foco cada vez maior em backend e dados.',
-    'Passei boa parte da trajetória como fullstack em empresas da região metropolitana de Salvador: APIs, serviços web e mobile, documentação e sistemas SaaS. Hoje especializo-me em Data Science e atuo como CTO da Codíco Tecnologia, empresa que construí em sociedade com um dos meus melhores amigos.',
-    'Sigo estudando, certificando e refinando arquitetura, estruturas e armazenamento — sempre com o mesmo objetivo: agregar valor onde estiver.',
+    'Nordestino do sertão baiano, dev desde os 12 anos, sempre com foco em desenvolvimento web. Iniciei minha carreira como web designer, atuando principalmente com o desenvolvimento básico de páginas para a web, utilizando apenas HTML, CSS e JavaScript vanilla, inicialmente como atividade recreativa.',
+    'Formei-me em Engenharia de Software pela Universidade Católica do Salvador, na capital baiana, e passei a atuar profissionalmente na área em 2018, ainda com foco em desenvolvimento web, porém, agora, com maior ênfase em backend e dados.',
+    'Hoje, estou me especializando em Data Science e atuo como CTO da Codíco Tecnologia, minha própria empresa, em sociedade com um dos meus melhores amigos.',
   ],
   hardSkillGroups: [
     {
@@ -60,6 +60,27 @@ export const profile = {
     href: 'https://dev.to/vgeruso',
     label: 'Artigos no dev.to',
   },
+  books: [
+    {
+      title: 'Clean Code',
+      author: 'Robert C. Martin',
+      focus: 'Engenharia',
+      href: 'https://meli.la/1dDLhwo',
+    },
+    {
+      title: 'Startup Enxuta',
+      author: 'Eric Ries',
+      focus: 'Produto',
+      href: 'https://meli.la/1XDTocj',
+    },
+    {
+      title: 'Design Centrado no Usuário',
+      author: 'Travis Lowdermilk',
+      focus: 'UX',
+      href: 'https://meli.la/237jWDs',
+    },
+  ],
+
   contacts: [
     {
       name: 'Énóis',

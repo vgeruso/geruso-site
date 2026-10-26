@@ -29,8 +29,8 @@ export function Contacts() {
             <Reveal key={contact.name} delay={0.06 * index}>
               <a
                 href={contact.href}
-                target={contact.kind === 'email' ? undefined : '_blank'}
-                rel={contact.kind === 'email' ? undefined : 'noopener noreferrer'}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="contact-link"
               >
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center border border-[var(--border-subtle)] bg-[var(--bg-elevated)] text-[var(--accent)]">
