@@ -1,21 +1,153 @@
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --bg-deep: #06090f;
+  --bg-panel: #0c121c;
+  --bg-elevated: #121a27;
+  --border-subtle: rgba(148, 163, 184, 0.14);
+  --border-strong: rgba(148, 163, 184, 0.28);
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent: #67e8f9;
+  --accent-soft: rgba(103, 232, 249, 0.12);
+  --silver: #e2e8f0;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   margin: 0;
   min-width: 320px;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--bg-deep);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.site-shell {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(103, 232, 249, 0.08), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 40%, rgba(148, 163, 184, 0.05), transparent 50%),
+    radial-gradient(ellipse 50% 30% at 0% 80%, rgba(103, 232, 249, 0.04), transparent 45%),
+    var(--bg-deep);
+}
+
+.site-shell::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black, transparent);
 }
 
 .gradient-text {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, rgb(226 232 240), rgb(241 245 249), rgb(248 250 252));
+  background-image: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 45%, #67e8f9 100%);
 }
 
-.glass {
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.accent-text {
+  color: var(--accent);
+}
+
+.panel {
+  background: linear-gradient(160deg, rgba(18, 26, 39, 0.9), rgba(12, 18, 28, 0.75));
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+}
+
+.panel-hover {
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.panel-hover:hover {
+  border-color: var(--border-strong);
+  background: linear-gradient(160deg, rgba(22, 32, 48, 0.95), rgba(14, 22, 34, 0.85));
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0.35rem;
+  border: 1px solid var(--border-subtle);
+  background: rgba(103, 232, 249, 0.04);
+  color: var(--silver);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.skill-chip:hover {
+  border-color: rgba(103, 232, 249, 0.35);
+  background: var(--accent-soft);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.soft-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border-left: 2px solid var(--accent);
+  background: rgba(103, 232, 249, 0.05);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--border-subtle);
+  background: rgba(12, 18, 28, 0.7);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-link:hover {
+  border-color: rgba(103, 232, 249, 0.4);
+  background: rgba(103, 232, 249, 0.06);
+  transform: translateY(-2px);
 }
