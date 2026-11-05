@@ -57,8 +57,8 @@ export const profile = {
     },
   ],
   articles: {
-    href: 'https://dev.to/vgeruso',
-    label: 'Artigos no dev.to',
+    href: 'https://enois.ia.br/blog/vgeruso',
+    label: 'Blog no Énois',
   },
   books: [
     {

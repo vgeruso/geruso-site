@@ -11,7 +11,7 @@ export function Articles() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">
             <h2 className="font-display text-3xl font-bold tracking-tight md:text-5xl">
-              Artigos técnicos
+              Além das issues
             </h2>
             <p className="mt-4 text-[var(--text-secondary)]">
               Anotações e reflexões sobre engenharia, backend e o que for aprendendo no caminho.
