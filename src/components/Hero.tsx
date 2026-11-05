@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin } from 'lucide-react'
+import { Github, Users } from 'lucide-react'
 import { profile } from '../data/profile'
 import { ScrollHint } from './ScrollHint'
 
@@ -54,16 +54,16 @@ export function Hero() {
             GitHub
           </motion.a>
           <motion.a
-            href={profile.socialQuick.linkedin}
+            href={profile.socialQuick.enois}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.96 }}
             className="inline-flex items-center gap-2 border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-4 py-2.5 text-sm font-medium text-[var(--silver)] transition-colors hover:border-[rgba(103,232,249,0.35)] hover:text-[var(--accent)]"
-            aria-label="LinkedIn"
+            aria-label="Énois"
           >
-            <Linkedin className="h-4 w-4" />
-            LinkedIn
+            <Users className="h-4 w-4" />
+            Énois
           </motion.a>
         </div>
       </motion.div>

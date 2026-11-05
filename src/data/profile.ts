@@ -79,6 +79,24 @@ export const profile = {
       focus: 'UX',
       href: 'https://meli.la/237jWDs',
     },
+    {
+      title: 'A Catedral e o Bazar',
+      author: 'Eric Steven Raymond',
+      focus: 'Tecnologia',
+      href: 'https://a.co/d/01bExkCy',
+    },
+    {
+      title: 'O que é software livre',
+      author: 'Algusto Campos',
+      focus: 'Tecnologia',
+      href: 'https://a.co/d/0bHTUDJc',
+    },
+    {
+      title: 'O que é Linux',
+      author: 'Algusto Campos',
+      focus: 'Tecnologia',
+      href: 'https://a.co/d/0hPuVDT0',
+    },
   ],
 
   contacts: [
@@ -89,9 +107,9 @@ export const profile = {
       kind: 'social' as const,
     },
     {
-      name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/victor-geruso-gomes-654a8111a/',
-      detail: 'victor-geruso-gomes',
+      name: 'GitHub',
+      href: 'https://github.com/vgeruso',
+      detail: 'github.com/vgeruso',
       kind: 'social' as const,
     },
     {
@@ -101,14 +119,14 @@ export const profile = {
       kind: 'email' as const,
     },
     {
-      name: 'GitHub',
-      href: 'https://github.com/vgeruso',
-      detail: 'github.com/vgeruso',
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/victor-geruso-gomes-654a8111a/',
+      detail: 'victor-geruso-gomes',
       kind: 'social' as const,
     },
   ],
   socialQuick: {
     github: 'https://github.com/vgeruso',
-    linkedin: 'https://www.linkedin.com/in/victor-geruso-gomes-654a8111a/',
+    enois: 'https://enois.ia.br/perfil/vgeruso',
   },
 } as const
