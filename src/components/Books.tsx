@@ -33,7 +33,7 @@ export function Books() {
               <div className="mt-auto flex items-end justify-between gap-3">
                 <p className="text-sm text-[var(--text-muted)]">{book.author}</p>
                 <span className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-[var(--text-secondary)] transition-colors group-hover:text-[var(--accent)]">
-                  {book.pago ? 'Comprar' : 'Ler'}
+                  {book.isPaid ? 'Comprar' : 'Ler'}
                   <ExternalLink className="h-4 w-4" />
                 </span>
               </div>
